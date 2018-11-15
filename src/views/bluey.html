@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>bluey</title>
+  <link rel="stylesheet" href="../css/bluey.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <script src="../js/jquery.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script src="../js/common.js"></script>
+</head>
+<body>
+  <div id="blueyPage" class="wow">
+    <div class="header-button-wrapper animated fadeInDown">
+      <a href="../../catalog.html">
+        <div class=" header-button"></div>
+        <div class="burger-lines-wrapper">
+          <div id="burger-close-wrap-0" class="burger-close-wrap oh">
+            <div class="burger-close"></div>
+          </div>
+          <div id="burger-close-wrap-1" class="burger-close-wrap oh">
+            <div class="burger-close"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- 介绍页 -->
+    <div class="introduce">
+      <div class="case-back">
+        <div class="case-back-line-wrap">
+          <div class="case-back-line animated slideInLeft"></div>
+        </div>
+        <div class="case-back-btn-wrap animated bounceInDown">
+          <span>SLIDE BACK</span>
+        </div>
+      </div>
+      <!-- 左侧 -->
+      <div class="intro-l">
+        <div class="intro-l-bg">
+          <div class="intro-l-img-wrap">
+            <img class="intro-l-img animated slideInLeft" src="../img/bluey/img-0.png" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 右侧 -->
+      <div class="intro-r">
+        <div class="intro-r-txt">
+          <div class="oh">
+            <h1 class="intro-r-txt-title">Internet.org</h1>
+          </div>
+          <div class="intro-r-line-wrap oh">
+            <div class="intro-r-line animated rubberBand"></div>
+          </div>
+          <div class="intro-r-txt-p-wrap animated slideInUp">
+            <div class="oh">
+              <p class="intro-r-txt-p">Internet.org is a bluey-led
+                initiative with the goal of bringing affordable access to selected Internet services and it’s benefits to
+                the
+                developing world. That by increasing efficiency, and facilitating the development of new business models
+                around the provision of Internet access.</p>
+            </div>
+            <div class="oh">
+              <p class="intro-r-txt-p">Together with Fantasy, I did visual
+                explorations to tell the story of bringing internet access to every person on the planet. Showing the
+                impact
+                of connectivity through humble real-life stories of the people benefitting from the internet for the first
+                time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- 灰色隔离层 -->
+        <div class="team-wrap">
+          <div class="team cf hide" id="team-wrap">
+            <div class="team-col">
+              <div class="team-title">AGENCY</div>
+              <div class="team-value">Fantasy</div>
+              <div class="team-title">MY ROLE</div>
+              <div class="team-value">Designer</div>
+            </div>
+            <div class="team-col">
+              <div class="team-title">UX DESIGNER</div>
+              <div class="team-value">Scott Carter</div>
+              <div class="team-title">PROTOTYPING</div>
+              <div class="team-value">Bojan Wilytsch</div>
+            </div>
+            <div class="team-col">
+              <div class="team-title">YEAR</div>
+              <div class="team-value">2015</div>
+            </div>
+          </div>
+        </div>
+        <!-- 双色层 -->
+        <div class="double-team">
+          <div class="double-team-wrapper " >
+            <div class="double-team-bg-wrapper " >
+              <img class="double-team-bg hide" id="double-team-bg" src="../img/bluey/img-0.png">
+            </div>
+          </div>
+          <div class="double-team-gray"></div>
+          <div class="double-team-white"></div>
+        </div>
+        <!-- 海报层 -->
+        <section id="k-board" class="last">
+          <div id="k-board-txt" class="hide">
+            <h2>AVAILABLE ON BOARD</h2>
+            <p>Bluey is available on
+              all intercontinental KLM flights<br>and upcoming episodes are expected.</p>
+          </div>
+          <div id="k-board-img">
+            <img id="k-board-img-0" class="hide" src="../img/bluey/img-4.jpg"
+              alt=""> <img id="k-board-img-1" class="hide" src="../img/bluey/img-5.png" alt=""></div>
+        </section>
+  </div>
+  <script>
+    let flag = true
+      $(window).scroll((e) => {
+        if (flag) {
+          let winPos = $(window).scrollTop() // 窗口顶部到页面顶部的距离
+          canSingleShow($('#team-wrap'))
+          canSingleShow($('#double-team-bg'))
+          canSingleShow($('#k-board-txt'))
+          canSingleShow($('#k-board-img-0'))
+          canSingleShow($('#k-board-img-1'), "rollIn")
+          flag = false
+          setTimeout(() => {
+            flag = true
+          }, 100);
+        }
+      })
+  </script>
+</body>
+</html>
